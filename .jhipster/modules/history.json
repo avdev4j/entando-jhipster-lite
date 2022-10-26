@@ -1,0 +1,14 @@
+{
+  "actions" : [ {
+    "module" : "init",
+    "date" : "2022-10-26T09:12:46.392829Z",
+    "properties" : {
+      "packageName" : "com.mycompany.myapp",
+      "projectName" : "JHipster Sample Application",
+      "baseName" : "jhipsterSampleApplication",
+      "serverPort" : 8080,
+      "endOfLine" : "lf",
+      "indentSize" : 2
+    }
+  } ]
+}
