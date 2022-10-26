@@ -1,6 +1,7 @@
 package com.mycompany.myapp.cucumber;
 
 import io.cucumber.java.Before;
+import io.cucumber.junit.CucumberOptions;
 import io.cucumber.spring.CucumberContextConfiguration;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -23,6 +24,7 @@ import tech.jhipster.lite.cucumber.CucumberTestContext;
 import com.mycompany.myapp.JhipsterSampleApplicationApp;
 import com.mycompany.myapp.cucumber.CucumberConfiguration.CucumberRestTemplateConfiguration;
 
+@CucumberOptions(glue = "com.mycompany.myapp")
 @CucumberContextConfiguration
 @SpringBootTest(classes = { JhipsterSampleApplicationApp.class, CucumberRestTemplateConfiguration.class }, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CucumberConfiguration {
@@ -62,7 +64,7 @@ public class CucumberConfiguration {
       return response;
     };
   }
-  
+
   @TestConfiguration
   static class CucumberRestTemplateConfiguration {
 
