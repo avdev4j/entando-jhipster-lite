@@ -2,13 +2,14 @@ package com.mycompany.myapp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tech.jhipster.lite.JHLiteApp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 import com.mycompany.myapp.common.domain.Generated;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackageClasses = { JHLiteApp.class, JhipsterSampleApplicationApp.class })
 @Generated(reason = "Not testing logs")
 public class JhipsterSampleApplicationApp {
 

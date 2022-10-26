@@ -25,6 +25,9 @@
     <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
     <failsafe-plugin.version>3.0.0-M5</failsafe-plugin.version>
     <spring-boot.version>2.7.5</spring-boot.version>
+    <cucumber.version>7.8.1</cucumber.version>
+    <testng.version>7.6.1</testng.version>
+    <jhlite.version>0.20.0</jhlite.version>
   </properties>
 
   <dependencyManagement>
@@ -58,9 +61,58 @@
     </dependency>
 
     <dependency>
+      <groupId>tech.jhipster.lite</groupId>
+      <artifactId>jhlite</artifactId>
+      <version>${jhlite.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-spring</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>tech.jhipster.lite</groupId>
+      <artifactId>jhlite</artifactId>
+      <version>${jhlite.version}</version>
+      <classifier>tests</classifier>
+      <scope>test</scope>
+      <type>test-jar</type>
     </dependency>
   </dependencies>
 
